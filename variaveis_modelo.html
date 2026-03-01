@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variáveis para Modelos de E-mail - SolusVM2VPS</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 24px; color: #1e293b; }
+        h1, h2 { color: #0f172a; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+        th, td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; vertical-align: top; }
+        th { background: #f1f5f9; }
+        code { background: #f8fafc; padding: 2px 6px; border-radius: 6px; }
+        .obs { background: #fff7ed; border: 1px solid #fed7aa; padding: 12px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Variáveis do módulo para modelos de e-mail (WHMCS)</h1>
+    <p>
+        Lista de variáveis normalmente disponíveis em templates de e-mail de <strong>Produto/Serviço</strong> do WHMCS para serviços do módulo SolusVM2VPS.
+    </p>
+
+    <h2>1) Variáveis padrão de serviço (mais utilizadas)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Descrição</th>
+                <th>Variável</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>ID do serviço</td><td><code>{$service_id}</code></td></tr>
+            <tr><td>Nome do produto</td><td><code>{$service_product_name}</code></td></tr>
+            <tr><td>Domínio/hostname do serviço</td><td><code>{$service_domain}</code></td></tr>
+            <tr><td>Usuário do serviço</td><td><code>{$service_username}</code></td></tr>
+            <tr><td>Senha do serviço</td><td><code>{$service_password}</code></td></tr>
+            <tr><td>IP principal do servidor</td><td><code>{$service_server_ip}</code></td></tr>
+            <tr><td>Hostname do servidor</td><td><code>{$service_server_hostname}</code></td></tr>
+            <tr><td>Nome do servidor no WHMCS</td><td><code>{$service_server_name}</code></td></tr>
+            <tr><td>1º DNS</td><td><code>{$service_server_ns1}</code></td></tr>
+            <tr><td>2º DNS</td><td><code>{$service_server_ns2}</code></td></tr>
+        </tbody>
+    </table>
+
+    <h2>2) Campos customizados do produto (custom fields)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Campo do módulo/produto</th>
+                <th>Variável no template</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>SolusVM server ID (vserverid)</td><td><code>{$service_custom_field_solusvm_server_id}</code> <em>ou</em> <code>{$service_custom_field_vserverid}</code></td></tr>
+            <tr><td>Restore backup id</td><td><code>{$service_custom_field_restore_backup_id}</code></td></tr>
+            <tr><td>SSH Key</td><td><code>{$service_custom_field_ssh_key}</code></td></tr>
+        </tbody>
+    </table>
+
+    <h2>3) Configurações do módulo (Config Options do produto)</h2>
+    <p>O módulo define as opções abaixo no produto (plan, location, os_image, application, etc.). Em templates do WHMCS elas podem ser usadas por nome (quando suportado) ou por índice legado.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Config Option</th>
+                <th>Variável sugerida</th>
+                <th>Índice legado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>plan</td><td><code>{$service_config_option_plan}</code></td><td><code>{$service_config_option_1}</code></td></tr>
+            <tr><td>location</td><td><code>{$service_config_option_location}</code></td><td><code>{$service_config_option_2}</code></td></tr>
+            <tr><td>os_image</td><td><code>{$service_config_option_os_image}</code></td><td><code>{$service_config_option_3}</code></td></tr>
+            <tr><td>application</td><td><code>{$service_config_option_application}</code></td><td><code>{$service_config_option_4}</code></td></tr>
+            <tr><td>user_data</td><td><code>{$service_config_option_user_data}</code></td><td><code>{$service_config_option_5}</code></td></tr>
+            <tr><td>backup_enabled</td><td><code>{$service_config_option_backup_enabled}</code></td><td><code>{$service_config_option_6}</code></td></tr>
+            <tr><td>role</td><td><code>{$service_config_option_role}</code></td><td><code>{$service_config_option_7}</code></td></tr>
+            <tr><td>limit_group</td><td><code>{$service_config_option_limit_group}</code></td><td><code>{$service_config_option_8}</code></td></tr>
+            <tr><td>additional_disk_offer</td><td><code>{$service_config_option_additional_disk_offer}</code></td><td><code>{$service_config_option_9}</code></td></tr>
+            <tr><td>snapshot_enabled</td><td><code>{$service_config_option_snapshot_enabled}</code></td><td><code>{$service_config_option_10}</code></td></tr>
+            <tr><td>360monitoring_enabled</td><td><code>{$service_config_option_360monitoring_enabled}</code></td><td><code>{$service_config_option_11}</code></td></tr>
+            <tr><td>ssh_key</td><td><code>{$service_config_option_ssh_key}</code></td><td><code>{$service_config_option_12}</code></td></tr>
+            <tr><td>disaster_recovery_enabled</td><td><code>{$service_config_option_disaster_recovery_enabled}</code></td><td><code>{$service_config_option_13}</code></td></tr>
+        </tbody>
+    </table>
+
+    <div class="obs">
+        <strong>Observação importante:</strong>
+        a disponibilidade exata dos placeholders pode variar conforme o tipo do template de e-mail no WHMCS e a versão instalada.
+        Em caso de dúvida, use um e-mail de teste no WHMCS para validar cada variável.
+    </div>
+</body>
+</html>
