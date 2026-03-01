@@ -4,7 +4,7 @@ Módulo versão 3.0 para provisionamento por API em servidor Solusvm 2 via WHMCS
 
 Module version 3.0 for API provisioning on Solusvm 2 server via WHMCS.
 
-<img src="https://download.cloudatlantico.com.br/tela_01.jpg" alt="Print" width="500" height="300">
+<img src="https://download.cloudatlantico.com.br/tela_01.jpg" alt="Print" width="500" height="400">
 
 
 ## Compatibilidade / Compatibility
