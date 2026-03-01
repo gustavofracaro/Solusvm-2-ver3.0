@@ -7,7 +7,7 @@ Module version 3.0 for API provisioning on Solusvm 2 server via WHMCS.
 **Fotos das telas em breve / Screen photos coming soon!
 
 ## Compatibilidade / Compatibility
-- WHMCS 8.13.1
+- WHMCS 8.13.1 / WHMCS 9.0 / WHMCS 9.1
 - PHP 8.3
 - Ioncube 14
 - Solusvm 2
