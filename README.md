@@ -6,6 +6,7 @@ Module version 3.0 for API provisioning on Solusvm 2 server via WHMCS.
 
 <img src="https://download.cloudatlantico.com.br/tela_01.jpg" alt="Print" width="500" height="400">
 
+Teste grátis por 5 dias / Try it free for 5 days.
 
 ## Compatibilidade / Compatibility
 - WHMCS 8.13.1 / WHMCS 9.0 / WHMCS 9.1
